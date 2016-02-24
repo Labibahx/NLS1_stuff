@@ -37,7 +37,7 @@ def spec_inspec(n1,n2):
             plot(spec['col1'], spec['col2'], lw= 2, c= '0.5') # spectrum
             plot(spec['col1'], spec['col4'], lw= 1, c= 'r') # full model
             plot(spec['col1'], spec['col5'], lw= 1, c= 'y') # powerlaw continuum
-            plot(spec['col1'], spec['col6'], lw= 1, c= 'm') # narrow Hbeta
+            plot(spec['col1'], spec['col6'], lw= 1, c= 'c') # narrow Hbeta
             plot(spec['col1'], spec['col7'], lw= 1, c= 'b') # Lorentzian Hbeta
             plot(spec['col1'], spec['col8'], lw= 1, c= 'm') # narrow [OIII]
             plot(spec['col1'], spec['col9'], lw= 1, c= 'c') # broad [OIII]
@@ -62,7 +62,7 @@ def spec_inspec(n1,n2):
             ax2.set_ylim(-10,10)
             ax2.set_xlim(4500, 5400)
             scatter(spec['col1'], spec['col2']-spec['col4'], marker='+', color= '0.3')
-            
+            print "plotting obj", s
             flg= input("Good fit= 0, Bad fit= 1 \n flag= ")
             flags.append(flg)
             f_out.write(s + ","+ str(flg) + '\n')
